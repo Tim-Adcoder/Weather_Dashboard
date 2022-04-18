@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="./asset/style.css">
     <title>Weather Dashboard</title>
 </head>
@@ -16,22 +17,29 @@
         <h2>Search for a City: </h2>
         <div class="side_items">
            <div class="search_bar_container">
-               <input type="text" id="search_bar"
+               <input type="text" id="search_bar_text"
                placeholder="San Diego">
                <button onclick="clickSearch()" id="searchBtn">Search</button>
                </div>
                <hr>
-               <ul class="search_history"></ul>
+               <ul class="search_history" id = "past_search_buttons"></ul>
         </div>
     </aside>
     <main class="content">
-        <div id="today_details"></div>
-        <div class="forecast">
-           <h2>5 - Day Forecast : </h2>
+        <div id="today_details_container">
+            <h3 id ="searched_city_name"></h3>
+            <p id = "today_date"></p>
+        </div>
+        <div id="forecast">
+           <h2 id="forecast_title"></h2>
+           <div id="fiveday_container"></div>
    
    
         </div>
         <p></p>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
         <script src="./asset/script.js"></script>
     </main>
 </div>
