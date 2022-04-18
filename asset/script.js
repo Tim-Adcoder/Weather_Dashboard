@@ -1,3 +1,45 @@
+// I am presented with the last searched city forecast
+
+var apiKey = "5986f3d444acf96a8c10d153f67f792b";
+var currentDay = moment("LL")
+var cityList = [];
+
+// call function for current condition
+function todayWeather () {
+
+    var callURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
+
+    $.fetch(callURL) 
+        .then(response)
+        .then(data => {console.log(data)})
+        .catch(err => {console.log(err)})
+    
+        
+}
+// click function
+var cityName;
+var cityList = [];
+function clickSearch() {
+    // if (!city || "") {return}
+
+    saveHistory()
+}
+
+function saveHistory() {
+    var searchText = document.getElementById("search_bar");
+    var searchTextJson = JSON.stringify(searchText);
+    var inputArr = localStorage.setItem(cityName, searchTextJson);
+
+    for(let i=o; i <inputArr.length; i++) {
+        
+        var listItem = document.createElement(li)
+
+
+
+    }
+}
+
+
 // search for a city
 
 //presented with current and future conditions for that city
